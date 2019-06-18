@@ -17,7 +17,7 @@ Each contains data organized in a CSV style, where:
 There is also a Python script that generates the charts shown in my master's document which highlights the top **X%** most cited papers, in such a way that visualization of the most relevant works is easy to see. **X** is by default 10, but the user can change it via flag commands.
 ## Getting started
 ### Prerequisites
-*This step and the installation ones are only needed if you want to run the python script that orders the lists and generates the charts :)
+*The following steps are only necessary if you want to run the python script that orders the lists and generates the charts :)
 * Python3
 ### Installation
 
