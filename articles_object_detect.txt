@@ -1,0 +1,5 @@
+## Open source algorithms on bounding box regression
+year, cites, bbox_algorithm
+2015, 9993, Faster R-CNN
+2019, 8, TridentNet
+2017, 2385, Mask R-CNN

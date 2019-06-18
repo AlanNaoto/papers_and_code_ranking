@@ -1,0 +1,50 @@
+## Open source algorithms on semantic segmentation
+year, cites, semantic_algorithm
+2015, 4691, U-Net 
+2016, 1974, Segnet
+2017, 1956, DeepLab
+2016, 8342, FCN
+2016, 290, ENet
+2017, 40, LinkNet
+2018, 3034, DenseNet
+2017, 256, Tiramisu
+2016, 1477, DilatedNet
+2016, 36, PixelNet
+2017, 70, ICNet
+2017, 30, ERFNet
+2016, 398, RefineNet
+2017, 857, PSPNet
+2015, 1489, DesconvNet
+2016, 102, FRRN
+2017, 165, GCN
+2016, 163, LRR
+2017, 131, DUC, HDC
+2016, 140, MultiNet
+2017, 24, Segaware
+2016, 183, Semantic Segmentation using Adversarial Networks
+2017, 17, PixelDCN
+2018, 5, ShuffleSeg
+2018, 35, AdaptSegNet
+2018, 131, TuSimple-DUC
+2017, 788, ResNeXt
+2018, 14, R2U-Net
+2018, 19, Attention U-Net
+2018, 4, DANet
+2018, 0, LadderNet
+2018, 11, BiSeNet
+2018, 17, ESPNet
+2018, 23, DFN
+2018, 2, CCNet
+2018, 26, DenseAPP
+## Open source algorithms on instance segmentation
+year, cites, instance_algorithm
+2017, 218, FCIS
+2015, 432, MNC
+2015, 335, DeepMask
+2016, 324, SharpMask
+2018, 1708, Mask R-CNN
+2016, 131, RIS
+2017, 11, FastMask
+2017, 23, BlitzNet
+2018, 56, PANet
+2018, 10, TernausNetV2

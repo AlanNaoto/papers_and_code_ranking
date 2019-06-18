@@ -1,0 +1,12 @@
+## Open source algorithms on instance segmentation
+year, cites, instance_algorithm
+2017, 218, FCIS
+2015, 432, MNC
+2015, 335, DeepMask
+2016, 324, SharpMask
+2018, 1708, Mask R-CNN
+2016, 131, RIS
+2017, 11, FastMask
+2017, 23, BlitzNet
+2018, 56, PANet
+2018, 10, TernausNetV2
