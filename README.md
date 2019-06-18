@@ -35,7 +35,7 @@ Navigate to the downloaded directory.
 ```
 cd ~/papers_and_code_ranking
 ```
-[TODO] And run the script. The generated charts are saved on the same dir as the main.py file
+[TODO Fix code for PEP8 and put FLAG option!] And run the script. The generated charts are saved on the same dir as the main.py file
 ```
 python3 main.py --Update with flag commands here! (X%)
 ```
