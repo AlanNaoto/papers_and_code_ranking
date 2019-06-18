@@ -35,7 +35,7 @@ Navigate to the downloaded directory.
 ```
 cd ~/papers_and_code_ranking
 ```
-And run the script. The generated charts are saved on the same dir as the main.py file
+[TODO] And run the script. The generated charts are saved on the same dir as the main.py file
 ```
 python3 main.py --Update with flag commands here! (X%)
 ```
