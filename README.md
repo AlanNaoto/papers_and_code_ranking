@@ -1,5 +1,5 @@
-# Ranking papers by citation
-## Object detection for bounding box, semantic segmentation and instance segmentation
+# Ranking object detection papers by citation
+## Bounding box, semantic and instance segmentation
 Last updated: 18 june 2019
 
 List of algorithms (papers with open source code) researched for object detection (bounding box, semantic segmentation, instance segmentation). This repository is mainly used as a citation reference for my master's dissertation. 
