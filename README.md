@@ -3,8 +3,9 @@ Last updated: 18 june 2019
 
 List of algorithms (papers with open source code) researched for object detection (bounding box, semantic segmentation, instance segmentation). This repository is mainly used as a citation reference for my master's dissertation. 
 
-There are three TXT files:
-* [Bounding box file](articles_object_detect.txt)
+There are four TXT files:
+* [Bounding box file](articles_object_detect_reduced.txt)
+* [Legacy Bounding box file](articles_object_detect.txt)
 * [Semantic segmentation file](articles_semantic_segmentation.txt)
 * [Instance segmentation file](articles_instance_segmentation.txt)
 
