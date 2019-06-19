@@ -1,61 +1,66 @@
 """
 Alan Naoto Tabata
 Created: 18/03/2019
-Updated: 18/03/2019
+Updated: 19/06/2019
 """
 
 import matplotlib.pyplot as plt
 
 
 class GraphAnalysis:
-    def __init__(self):
-        pass
+    def __init__(self, input_files):
+        name_id = 2
+        year_id = 0
+        cites_id = 1
+        ignore_first_two_lines = 2
+        row_with_labels = 1
+        for txt_file in input_files:
+            with open(txt_file, 'r') as file:
+                lines = file.read().splitlines()
+                data = [lines[row_with_labels].split(', ')]
+                data = data + [[x.split(', ')[name_id], int(x.split(', ')[year_id]), int(x.split(', ')[cites_id])] for x in lines[ignore_first_two_lines:]]
+                if "object" in txt_file:                    
+                    self.boundingbox_content = data
+                elif "semantic" in txt_file:
+                    self.semantic_content = data
+                elif "instance" in txt_file:
+                    self.instance_content = data
+                else:
+                    raise Exception('Are you sure the txt files have the correct name? Check their syntax on the main repository')
 
-    def readInputs(self, inputFile):
-        with open(inputFile, 'r') as file:
-            lines = file.read().splitlines()
 
-        # Creates index breakpoints when collecting each article entry
-        semanticIndex = lines.index('## Open source algorithms on semantic segmentation')
-        instanceIndex = lines.index("## Open source algorithms on instance segmentation")
-        semanticContent = lines[semanticIndex+1:instanceIndex]
-        instanceContent = lines[instanceIndex+1:]
+    def create_charts(self, cites_upper_threshold):
+        most_cited_boundingbox = self._create_chart_template(self.boundingbox_content, cites_upper_threshold, 'BoundingBox')
+        most_cited_semantic = self._create_chart_template(self.semantic_content, cites_upper_threshold, 'Semantic')
+        most_cited_instance = self._create_chart_template(self.instance_content, cites_upper_threshold, 'Instance')
+        print('Most cited bounding box algorithms:', most_cited_boundingbox)
+        print('Most cited semantic algorithms:', most_cited_semantic)
+        print('Most cited instance algorithms:', most_cited_instance)
 
-        self.semanticContent = [[x.split(', ')[2], int(x.split(', ')[0]), int(x.split(', ')[1])] for x in semanticContent[1:]]
-        self.instanceContent = [[x.split(', ')[2], int(x.split(', ')[0]), int(x.split(', ')[1])] for x in instanceContent[1:]]
-
-        self.semanticContent = [semanticContent[0].split(', ')] + self.semanticContent
-        self.instanceContent = [instanceContent[0].split(', ')] + self.instanceContent
-
-    def createCharts(self, citesUpperThreshold, showImages):
-        mostCitedSemantic = self._createChartTemplate(self.semanticContent, citesUpperThreshold, showImages)
-        mostCitedInstance = self._createChartTemplate(self.instanceContent, citesUpperThreshold, showImages)
-        print('Most cited semantic algorithms:', mostCitedSemantic)
-        print('Most cited instance algorithms:', mostCitedInstance)
-
-    def _createChartTemplate(self, contentList, citesUpperThreshold, showImages):
+    def _create_chart_template(self, content_list, cites_upper_threshold, figure_name):
         # Order list by quantity of citations
-        orderedList = sorted(contentList[1:], key=lambda x: x[2])  # contentList[1:] so that I don't get the label
+        ordered_list = sorted(content_list[1:], key=lambda x: x[2])  # content_list[1:] so that I don't get the label
 
         # Check at which index should the bars start being red
-        quantityOfAlgorithms = len(orderedList)
-        indexStartTopAlgorithms = quantityOfAlgorithms - int(quantityOfAlgorithms * citesUpperThreshold)
-        mostCitedAlgorithms = []
+        quantity_of_algorithms = len(ordered_list)
+        index_start_stop_algorithms = quantity_of_algorithms - int(quantity_of_algorithms * cites_upper_threshold)
+        most_cited_algorithms = []
 
         # Begin construction of image
         fig, ax = plt.subplots()
-        for index, x in enumerate(orderedList):
+        for index, x in enumerate(ordered_list):
             algorithm = x[0]
             citations = x[2]
-            if index >= indexStartTopAlgorithms:
+            if index >= index_start_stop_algorithms:
                 red = ax.barh(y=algorithm, width=citations, color='r')
-                mostCitedAlgorithms.append([algorithm, x[1], citations])
+                most_cited_algorithms.append([algorithm, x[1], citations])
             else:
                 gray = ax.barh(y=algorithm, width=citations, color='0.75')
 
         # Puts x ticks only for red bars
-        redBarXTicks = [x[0] if counter >= indexStartTopAlgorithms else " " for counter, x in enumerate(orderedList)]
-        plt.yticks(redBarXTicks)
+        red_bar_x_ticks = [x[0] if counter >= index_start_stop_algorithms else " " for counter, x in enumerate(ordered_list)]
+        plt.yticks(red_bar_x_ticks)
+        ax.tick_params(axis='y', labelsize=10)
 
         # Gets rid of the border around the chart
         ax.spines['top'].set_visible(False)
@@ -63,30 +68,26 @@ class GraphAnalysis:
 
         # Puts labeling on the image
         plt.xlabel('Number of citations')
-        plt.title(contentList[0][2])
+        # plt.title(content_list[0][2])
         plt.legend((red, gray),
-                   ('>={} cites'.format(mostCitedAlgorithms[0][2]), '<{} cites'.format(mostCitedAlgorithms[0][2])),
+                   ('>={} cites'.format(most_cited_algorithms[0][2]), '<{} cites'.format(most_cited_algorithms[0][2])),
                    loc=4)
 
         # Leaves a little more space to the left so that the label name can appear entirely
-        plt.gcf().subplots_adjust(left=0.15)
+        plt.gcf().subplots_adjust(left=0.17)
 
-        plt.savefig(algorithm)
-        if showImages:
-            plt.show()
+        plt.savefig(figure_name)
         plt.close()
-        return mostCitedAlgorithms
+        return most_cited_algorithms
 
 
 if __name__ == "__main__":
     # User input
-    inputFile = "articles.txt"  # Path to file with articles with citations
-    citesUpperThreshold = 0.10  # In percentage, from 0-1, the top x% most cited articles
-    showImages = False # True or False
+    # Files with articles with citations
+    input_files = ['articles_object_detect_reduced.txt', 'articles_semantic_segmentation.txt', 'articles_instance_segmentation.txt']
+    cites_upper_threshold = 0.10  # In percentage, from 0.00 to 1.00, the top x% most cited articles
 
     # Begin processing of data and image plotting
-    GraphGenerator = GraphAnalysis()
-    GraphGenerator.readInputs(inputFile)
-    GraphGenerator.createCharts(citesUpperThreshold, showImages)
-
+    GraphGenerator = GraphAnalysis(input_files)
+    GraphGenerator.create_charts(cites_upper_threshold)
 

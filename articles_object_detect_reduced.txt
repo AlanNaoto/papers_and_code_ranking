@@ -1,0 +1,32 @@
+## Open source algorithms on bounding box regression searched on 18 june 2019
+year, cites, bbox_algorithm
+2014, 8667, R-CNN
+2013, 3005, Overfeat
+2014, 585, MultiBox
+2015, 2790, SPP-Net
+2015, 338, MR-CNN
+2015, 115, DeepBox
+2015, 5647, Fast R-CNN
+2015, 86, DeepProposal
+2015, 9993, Faster R-CNN
+2016, 4435, YOLO v1
+2016, 456, ION
+2016, 536, OHEM
+2016, 59, CRAPF
+2016, 119, MPN
+2016, 4049, SSD
+2016, 502, MS-CNN
+2016, 1355, R-FCN
+2015, 258, DeepID-Net
+2016, 152, NoC
+2017, 293, DSSD
+2016, 100, TDM
+2017, 1281, FPN
+2017, 2147, YOLO v2
+2017, 410, DCN
+2017, 969, RetinaNet
+2017, 2385, Mask R-CNN
+2017, 120, DSOD
+2017, 149, Soft-NMS
+2018, 558, YOLO v3
+2018, 103, Cascade R-CNN

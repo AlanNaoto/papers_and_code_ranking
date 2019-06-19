@@ -1,12 +1,20 @@
-## Open source algorithms on instance segmentation searched on 18 march 2019
+## Open source algorithms on instance segmentation searched/updated on 19 june 2019
 year, cites, instance_algorithm
-2017, 218, FCIS
-2015, 432, MNC
-2015, 335, DeepMask
-2016, 324, SharpMask
-2018, 1708, Mask R-CNN
-2016, 131, RIS
-2017, 11, FastMask
-2017, 23, BlitzNet
-2018, 56, PANet
-2018, 10, TernausNetV2
+2017, 257, FCIS
+2016, 502, MNC
+2015, 369, DeepMask
+2016, 361, SharpMask
+2018, 2385, Mask R-CNN
+2016, 146, RIS
+2017, 12, FastMask
+2017, 36, BlitzNet
+2018, 94, PANet
+2018, 20, TernausNetV2
+2019, 3, MS R-CNN
+2017, 52, SDS-RCNN
+2016, 119, MultiPath Network
+2019, 0, YOLOACT
+2018, 23, PRM
+2018, 17, Weakly- and Semi-Supervised Panoptic Segmentation
+2019, 0, Pose2Seg
+2017, 222, Siamese Mask R-CNN
