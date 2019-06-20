@@ -47,24 +47,26 @@ class GraphAnalysis:
 
         # Check at which index should the bars start being red
         quantity_of_algorithms = len(ordered_list)
-        lower_percentile_index = int(quantity_of_algorithms*(1-cites_upper_threshold))        
+        index_start_stop_algorithms = quantity_of_algorithms - int(quantity_of_algorithms * cites_upper_threshold)
         most_cited_algorithms = []
+
         # Begin construction of image
         fig, ax = plt.subplots()
         for index, x in enumerate(ordered_list):
             algorithm = x[0]
             citations = x[2]            
-            if index < lower_percentile_index:
-                gray = ax.barh(y=algorithm, width=citations, color='0.75')                
-            elif index == lower_percentile_index:                
-                last_gray_bar_cites = citations                
-                gray = ax.barh(y=algorithm, width=citations, color='0.75')
-            elif index > lower_percentile_index:
+            if index >= index_start_stop_algorithms:
                 red = ax.barh(y=algorithm, width=citations, color='r')
                 most_cited_algorithms.append([algorithm, x[1], citations])
-
+            elif index == index_start_stop_algorithms-1:                
+                first_gray_bar_appears = False
+                first_gray_bar_cites = citations                
+                gray = ax.barh(y=algorithm, width=citations, color='0.75')
+            else:                
+                gray = ax.barh(y=algorithm, width=citations, color='0.75')                
+                    
         # Puts x ticks only for red bars
-        red_bar_x_ticks = [x[0] if counter > lower_percentile_index else " " for counter, x in enumerate(ordered_list)]
+        red_bar_x_ticks = [x[0] if counter >= index_start_stop_algorithms else " " for counter, x in enumerate(ordered_list)]
         plt.yticks(red_bar_x_ticks)
         ax.tick_params(axis='y', labelsize=10)
 
@@ -76,7 +78,7 @@ class GraphAnalysis:
         plt.xlabel('Number of citations')
         # plt.title(content_list[0][2])
         plt.legend((red, gray),
-                   ('≥{} cites'.format(most_cited_algorithms[0][2]), '≤{} cites'.format(last_gray_bar_cites)),
+                   ('≥{} cites'.format(most_cited_algorithms[0][2]), '≤{} cites'.format(first_gray_bar_cites)),
                    loc=4)
 
         # Leaves a little more space to the left so that the label name can appear entirely

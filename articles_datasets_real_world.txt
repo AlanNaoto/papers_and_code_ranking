@@ -1,0 +1,14 @@
+## Open source real world datasets for autonomous driving - searched on 20 june 2019
+year, cites, name, reference, dataset
+2012, 3300, KITTI, http://www.cvlibs.net/publications/Geiger2012CVPR.pdf, http://www.cvlibs.net/datasets/kitti/
+2019, 7, nuScenes, https://arxiv.org/abs/1903.11027, https://www.nuscenes.org/
+2018, 57, ApolloScape, https://arxiv.org/abs/1803.06184, http://apolloscape.auto/index.html
+2017, 227, Oxford, https://robotcar-dataset.robots.ox.ac.uk/images/robotcar_ijrr.pdf, https://robotcar-dataset.robots.ox.ac.uk/
+2015, 580, Princeton Torcs, http://openaccess.thecvf.com/content_iccv_2015/html/Chen_DeepDriving_Learning_Affordance_ICCV_2015_paper.html, http://deepdriving.cs.princeton.edu/
+2016, 71, NCLT, https://journals.sagepub.com/doi/full/10.1177/0278364915614638, http://robots.engin.umich.edu/nclt/
+2011, 167, Ford Campus Vision and Lidar Data Set, https://journals.sagepub.com/doi/abs/10.1177/0278364911400640, http://robots.engin.umich.edu/SoftwareData/Ford
+2017, 24, DDD17, https://arxiv.org/abs/1711.01458, http://sensors.ini.uzh.ch/news_page/DDD17.html
+2009, 976, Caltech pedestrian, http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/CVPR09pedestrians.pdf, http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/
+2018, 77, BDD100K, https://arxiv.org/abs/1805.04687, https://bdd-data.berkeley.edu/
+2015, 1520, Cityscapes, http://openaccess.thecvf.com/content_cvpr_2016/html/Cordts_The_Cityscapes_Dataset_CVPR_2016_paper.html, https://www.cityscapes-dataset.com/
+2010, 325, LISA, https://cvrr.ucsd.edu/publications/2010/sivaraman_ITS10.pdf, http://cvrr.ucsd.edu/LISA/vehicledetection.html

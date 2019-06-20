@@ -1,0 +1,5 @@
+## Open source virtual simulation datasets for autonomous driving - searched on 20 june 2019
+year, cites, name, reference, dataset
+2016, 412, SYNTHIA, https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Ros_The_SYNTHIA_Dataset_CVPR_2016_paper.pdf
+2017, None, Udacity's Self-Driving Car Simulator, None, https://github.com/udacity/self-driving-car-sim
+2018, 197, Airsim, https://arxiv.org/abs/1705.05065, https://github.com/Microsoft/AirSim
