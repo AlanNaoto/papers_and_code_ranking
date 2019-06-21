@@ -1,0 +1,10 @@
+## Open source algorithms on optical flow searched/updated on 21 june 2019
+year, cites, optical_flow_algorithm, reference, code
+2015, 785, FlowNet, http://openaccess.thecvf.com/content_iccv_2015/html/Dosovitskiy_FlowNet_Learning_Optical_ICCV_2015_paper.html, NA (not official at least)
+2017, 554, FlowNet 2.0, https://lmb.informatik.uni-freiburg.de/Publications/2017/IMKDB17/, https://github.com/lmb-freiburg/flownet2
+2016, 121, Back to Basics: Unsupervised Learning of Optical Flow via Brightness Constancy and Motion Smoothness, https://arxiv.org/abs/1608.05842, https://github.com/ryersonvisionlab/unsupFlownet (not official?)
+2017, 53, CNN-based Patch Matching for Optical Flow with Thresholded Hinge Embedding Loss, http://openaccess.thecvf.com/content_cvpr_2017/html/Bailer_CNN-Based_Patch_Matching_CVPR_2017_paper.html, NA
+2017, 166, Optical Flow Estimation using a Spatial Pyramid Network(SpyNet), http://openaccess.thecvf.com/content_cvpr_2017/html/Ranjan_Optical_Flow_Estimation_CVPR_2017_paper.html, https://github.com/anuragranj/spynet
+2018, 129, PWC-Net, http://openaccess.thecvf.com/content_cvpr_2018/html/Sun_PWC-Net_CNNs_for_CVPR_2018_paper.html, https://github.com/NVlabs/PWC-Net
+2018, 31, Occlusion Aware Unsupervised Learning of Optical Flow, http://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Occlusion_Aware_Unsupervised_CVPR_2018_paper.html, NA
+2018, 38, LiteFlowNet, http://openaccess.thecvf.com/content_cvpr_2018/html/Hui_LiteFlowNet_A_Lightweight_CVPR_2018_paper.html, https://github.com/twhui/LiteFlowNet

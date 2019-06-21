@@ -19,7 +19,7 @@ class GraphAnalysis:
                 lines = file.read().splitlines()
                 data = [lines[row_with_labels].split(', ')]
                 data = data + [[x.split(', ')[name_id], int(x.split(', ')[year_id]), int(x.split(', ')[cites_id])] for x in lines[ignore_first_two_lines:]]
-                if "object" in txt_file:                    
+                if "object_detect_reduced" in txt_file:                    
                     self.boundingbox_content = data
                 elif "semantic" in txt_file:
                     self.semantic_content = data
@@ -27,6 +27,8 @@ class GraphAnalysis:
                     self.instance_content = data
                 elif "real" in txt_file:
                     self.dataset_real_world = data
+                elif "depth_estimation_reduced" in txt_file:
+                	self.depth_estimation = data
                 else:
                     raise Exception('Are you sure the txt files have the correct name? Check their syntax on the main repository')
 
@@ -36,10 +38,13 @@ class GraphAnalysis:
         most_cited_semantic = self._create_chart_template(self.semantic_content, cites_upper_threshold, 'Semantic')
         most_cited_instance = self._create_chart_template(self.instance_content, cites_upper_threshold, 'Instance')
         most_cited_dataset_real_world = self._create_chart_template(self.dataset_real_world, cites_upper_threshold, 'Datasets_real')
+        most_cited_depth_estimation = self._create_chart_template(self.depth_estimation, cites_upper_threshold, 'Depth_estimation')
         print('Most cited bounding box algorithms:', most_cited_boundingbox)
         print('Most cited semantic algorithms:', most_cited_semantic)
         print('Most cited instance algorithms:', most_cited_instance)
-        print('Most cited datasets real world:', most_cited_dataset_real_world)
+        print('Most cited depth estimation:', most_cited_depth_estimation)
+        print('Most cited datasets real world:', most_cited_dataset_real_world)        
+
 
     def _create_chart_template(self, content_list, cites_upper_threshold, figure_name):
         # Order list by quantity of citations
@@ -66,7 +71,9 @@ class GraphAnalysis:
         # Puts x ticks only for red bars
         red_bar_x_ticks = [x[0] if counter > lower_percentile_index else " " for counter, x in enumerate(ordered_list)]
         plt.yticks(red_bar_x_ticks)
-        ax.tick_params(axis='y', labelsize=10)
+        ax.tick_params(axis='y', labelsize=10)        
+
+        ax.get_yaxis().set_ticks([])  # Hides y labels
 
         # Gets rid of the border around the chart
         ax.spines['top'].set_visible(False)
@@ -74,13 +81,14 @@ class GraphAnalysis:
 
         # Puts labeling on the image
         plt.xlabel('Number of citations')
+        plt.ylabel('Algorithms')
         # plt.title(content_list[0][2])
         plt.legend((red, gray),
                    ('≥{} cites'.format(most_cited_algorithms[0][2]), '≤{} cites'.format(last_gray_bar_cites)),
                    loc=4)
 
         # Leaves a little more space to the left so that the label name can appear entirely
-        plt.gcf().subplots_adjust(left=0.17)
+        #plt.gcf().subplots_adjust(left=0.17)
 
         plt.savefig(figure_name)
         plt.close()
@@ -90,7 +98,8 @@ class GraphAnalysis:
 if __name__ == "__main__":
     # User input
     # Files with articles with citations
-    input_files = ['articles_object_detect_reduced.txt', 'articles_semantic_segmentation.txt', 'articles_instance_segmentation.txt', 'articles_datasets_real_world.txt']
+    input_files = ['articles_object_detect_reduced.txt', 'articles_semantic_segmentation.txt', 'articles_instance_segmentation.txt'
+    , 'articles_datasets_real_world.txt', 'articles_depth_estimation_reduced.txt']
     cites_upper_threshold = 0.10  # In percentage, from 0.00 to 1.00, the top x% most cited articles
 
     # Begin processing of data and image plotting
