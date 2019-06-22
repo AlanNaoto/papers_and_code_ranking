@@ -1,6 +1,6 @@
 ## Open source algorithms on monocular depth estimation searched/updated on 20 june 2019
 year, cites, depth_algoritm, reference, code
-2014, 962, Depth Map Prediction from a Single Image using a Multi-Scale Deep Network, https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf, https://github.com/hjimce/Depth-Map-Prediction
+2014, 962, Multi-Scale, https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf, https://github.com/hjimce/Depth-Map-Prediction
 2018, 14, Multi-Scale Continuous CRFs as Sequential Deep Networks for Monocular Depth Estimation, https://arxiv.org/abs/1803.00891, https://github.com/danxuhk/ContinuousCRF-CNN
 2016, 57, Dense Monocular Depth Estimation in Complex Dynamic Scenes, http://openaccess.thecvf.com/content_cvpr_2016/html/Ranftl_Dense_Monocular_Depth_CVPR_2016_paper.html, NA
 2018, 24, Structured Attention Guided Convolutional Neural Fields for Monocular Depth Estimation, https://arxiv.org/abs/1803.11029, https://github.com/danxuhk/StructuredAttentionDepthEstimation
@@ -10,7 +10,7 @@ year, cites, depth_algoritm, reference, code
 2015, 425, Deep Convolutional Neural Fields for Depth Estimation From a Single Image, https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Liu_Deep_Convolutional_Neural_2015_CVPR_paper.html, https://github.com/comeonyang/Depth-Estimation-DCNF
 2016, 349, Unsupervised CNN for Single View Depth Estimation: Geometry to the Rescue, https://arxiv.org/abs/1603.04992, https://github.com/Ravi-Garg/Unsupervised_Depth_Estimation
 2015, 209, Depth and Surface Normal Estimation From Monocular Images Using Regression on Deep Features and Hierarchical CRFs, http://openaccess.thecvf.com/content_cvpr_2015/html/Li_Depth_and_Surface_2015_CVPR_paper.html, NA
-2006, 705, Learning depth from single monocular images, http://papers.nips.cc/paper/2921-learning-depth-from-single-monocular-images.pdf, https://github.com/comeonyang/Depth-Estimation-DCNF (not official implementation)
+2006, 705, MRF, http://papers.nips.cc/paper/2921-learning-depth-from-single-monocular-images.pdf, https://github.com/comeonyang/Depth-Estimation-DCNF (not official implementation)
 2016, 103, neural regression forest, https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Roy_Monocular_Depth_Estimation_CVPR_2016_paper.html, NA
 2015, 78, Learning Ordinal Relationships for Mid-Level Vision, https://people.csail.mit.edu/danielzoran/ordinal.pdf, https://dilipkay.wordpress.com/ordinals/
 2018, 0, DenseDepth, https://arxiv.org/abs/1812.11941, https://github.com/ialhashim/DenseDepth
@@ -26,7 +26,7 @@ year, cites, depth_algoritm, reference, code
 2016, 385, Deeper Depth Prediction with Fully Convolutional Residual Networks, https://arxiv.org/abs/1606.00373, https://github.com/iro-cp/FCRN-DepthPrediction
 2019, 2, Pseudo-lidar from visual depth estimation: Bridging the gap in 3d object detection for autonomous driving, http://openaccess.thecvf.com/content_CVPR_2019/html/Wang_Pseudo-LiDAR_From_Visual_Depth_Estimation_Bridging_the_Gap_in_3D_CVPR_2019_paper.html, https://github.com/mileyan/pseudo_lidar
 2018, 7, Revisiting Single Image Depth Estimation: Toward Higher Resolution Maps with Accurate Object Boundaries, https://arxiv.org/abs/1810.02695, https://github.com/JunjH/Revisiting_Single_Depth_Estimation
-2015, 974, Predicting Depth Surface Normals and Semantic Labels with a Common Multi-Scale Convolutional Architecture, https://arxiv.org/pdf/1411.4734v4.pdf, https://cs.nyu.edu/~deigen/dnl/
+2015, 974, DepthNormal, https://arxiv.org/pdf/1411.4734v4.pdf, https://cs.nyu.edu/~deigen/dnl/
 2017, 45, A Two-Streamed Network for Estimating Fine-Scaled Depth Maps From Single RGB Images, http://openaccess.thecvf.com/content_iccv_2017/html/Li_A_Two-Streamed_Network_ICCV_2017_paper.html, NA
 2018, 22, PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing, http://openaccess.thecvf.com/content_cvpr_2018/html/Xu_PAD-Net_Multi-Tasks_Guided_CVPR_2018_paper.html, NA
 2016, 120, Single-image depth perception in the wild, http://papers.nips.cc/paper/6489-single-image-depth-perception-in-the-wild, https://github.com/princeton-vl/relative_depth (not official?)

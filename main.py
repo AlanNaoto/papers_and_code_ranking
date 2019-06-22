@@ -71,24 +71,28 @@ class GraphAnalysis:
         # Puts x ticks only for red bars
         red_bar_x_ticks = [x[0] if counter > lower_percentile_index else " " for counter, x in enumerate(ordered_list)]
         plt.yticks(red_bar_x_ticks)
-        ax.tick_params(axis='y', labelsize=10)        
-
-        ax.get_yaxis().set_ticks([])  # Hides y labels
+        ax.tick_params(axis='y', labelsize=8)
+        # Hides y labels
+        # ax.get_yaxis().set_ticks([])
 
         # Gets rid of the border around the chart
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
 
         # Puts labeling on the image
-        plt.xlabel('Number of citations')
-        plt.ylabel('Algorithms')
+        plt.xlabel('Cites')
+        plt.ylabel('Papers', rotation=0)
+        ax.xaxis.set_label_coords(1.05, 0.02)
+        ax.yaxis.set_label_coords(-0.05, 1.0)
+
         # plt.title(content_list[0][2])
+        plt.title('Top 10% cited papers', color='red')
         plt.legend((red, gray),
                    ('≥{} cites'.format(most_cited_algorithms[0][2]), '≤{} cites'.format(last_gray_bar_cites)),
                    loc=4)
 
         # Leaves a little more space to the left so that the label name can appear entirely
-        #plt.gcf().subplots_adjust(left=0.17)
+        plt.gcf().subplots_adjust(left=0.17)
 
         plt.savefig(figure_name)
         plt.close()
