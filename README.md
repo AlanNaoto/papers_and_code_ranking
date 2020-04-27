@@ -16,6 +16,33 @@ Each contains data organized in a CSV style, where:
 * The third column has the main name of the algorithm
 
 There is also a Python script that generates the charts shown in my master's document which highlights the top **X%** most cited papers, in such a way that visualization of the most relevant works is easy to see. **X** is by default 10, but the user can change it via flag commands.
+
+In short, the charts. Note that the reduced txt files were filtered based on publication date.
+
+Bounding box
+
+![BB](Bounding_box.png)
+
+Instance segmentation
+
+![IN](Instance.png)
+
+Semantic segmentation
+
+![SE](Semantic.png)
+
+Depth estimation
+
+![DE](Depth_estimation.png)
+
+Real world datasets
+
+![DR](Datasets_real.png)
+
+Synthetic datasets
+
+![SD](Datasets_simulation.png)
+
 ## Getting started
 ### Prerequisites
 *The following steps are only necessary if you want to run the python script that orders the lists and generates the charts :)
