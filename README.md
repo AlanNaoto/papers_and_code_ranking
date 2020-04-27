@@ -10,7 +10,7 @@ There are four TXT files:
 * [Instance segmentation file](articles_instance_segmentation.txt)
 
 Each contains data organized in a CSV style, where:
-* The first row has only informative data
+* The first row contains the header
 * The first column has the year the paper was published
 * The second column has the number of cites it had at the time I searched for the paper
 * The third column has the main name of the algorithm
@@ -34,7 +34,7 @@ Done, simple as that!
 ### Running the script
 Navigate to the downloaded directory.
 ```
-cd ~/papers_and_code_ranking
+cd papers_and_code_ranking
 ```
 [TODO Fix code for PEP8 and put FLAG option!] And run the script. The generated charts are saved on the same dir as the main.py file
 ```
