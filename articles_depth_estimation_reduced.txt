@@ -14,13 +14,13 @@ year, cites, depth_algoritm, reference, code
 2016, 103, neural regression forest, https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Roy_Monocular_Depth_Estimation_CVPR_2016_paper.html, NA
 2015, 78, Learning Ordinal Relationships for Mid-Level Vision, https://people.csail.mit.edu/danielzoran/ordinal.pdf, https://dilipkay.wordpress.com/ordinals/
 2018, 0, DenseDepth, https://arxiv.org/abs/1812.11941, https://github.com/ialhashim/DenseDepth
-2017, 396, Unsupervised Learning of Depth and Ego-Motion from Video, http://openaccess.thecvf.com/content_cvpr_2017/html/Zhou_Unsupervised_Learning_of_CVPR_2017_paper.html, https://github.com/tinghuiz/SfMLearner
+2017, 396, .Unsupervised Learning of Depth and Ego-Motion from Video, http://openaccess.thecvf.com/content_cvpr_2017/html/Zhou_Unsupervised_Learning_of_CVPR_2017_paper.html, https://github.com/tinghuiz/SfMLearner
 2017, 178, DeMoN, http://openaccess.thecvf.com/content_cvpr_2017/html/Ummenhofer_DeMoN_Depth_and_CVPR_2017_paper.html, https://github.com/lmb-freiburg/demon
 2018, 57, Depth-VO-Feat, http://openaccess.thecvf.com/content_cvpr_2018/html/Zhan_Unsupervised_Learning_of_CVPR_2018_paper.html, https://github.com/Huangying-Zhan/Depth-VO-Feat
 2018, 7, BA-net, https://arxiv.org/abs/1806.04807, https://github.com/frobelbest/BANet (currently under construction?)
 2018, 21, Digging Into Self-Supervised Monocular Depth Estimation, https://arxiv.org/abs/1806.01260, https://github.com/nianticlabs/monodepth2
 2016, 29, sparse-to-dense.pytorch, https://arxiv.org/abs/1607.06349, https://github.com/fangchangma/sparse-to-dense.pytorch
-2019, 19, http://openaccess.thecvf.com/content_CVPR_2019/html/Ranjan_Competitive_Collaboration_Joint_Unsupervised_Learning_of_Depth_Camera_Motion_Optical_CVPR_2019_paper.html, https://github.com/anuragranj/cc
+2019, 19, competitive-colaboration, http://openaccess.thecvf.com/content_CVPR_2019/html/Ranjan_Competitive_Collaboration_Joint_Unsupervised_Learning_of_Depth_Camera_Motion_Optical_CVPR_2019_paper.html, https://github.com/anuragranj/cc
 2019, 7, Revisiting Single Image Depth Estimation: Toward Higher Resolution Maps with Accurate Object Boundaries, https://arxiv.org/abs/1803.08673, https://github.com/JunjH/Revisiting_Single_Depth_Estimation
 2018, 4, struct2depth, https://arxiv.org/abs/1811.06152, https://github.com/tensorflow/models/tree/master/research/struct2depth
 2016, 385, Deeper Depth Prediction with Fully Convolutional Residual Networks, https://arxiv.org/abs/1606.00373, https://github.com/iro-cp/FCRN-DepthPrediction
