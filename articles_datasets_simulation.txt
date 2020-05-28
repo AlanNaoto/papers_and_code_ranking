@@ -1,9 +1,10 @@
-## Open source virtual simulation datasets for autonomous driving - searched on 20 june 2019 and updated on 27 april 2020
+## Open source virtual simulation datasets for autonomous driving - searched on 20 june 2019 and updated on 28 may 2020
 year, cites, name, reference, dataset
-2016, 701, SYNTHIA, https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Ros_The_SYNTHIA_Dataset_CVPR_2016_paper.pdf
+2016, 721, SYNTHIA, https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Ros_The_SYNTHIA_Dataset_CVPR_2016_paper.pdf
 2017, 0, Udacity, None, https://github.com/udacity/self-driving-car-sim
-2018, 400, Airsim, https://arxiv.org/abs/1705.05065, https://github.com/Microsoft/AirSim
-2016, 204, SIM 10k, https://arxiv.org/abs/1610.01983, https://github.com/umautobots/driving-in-the-matrix
-2018, 21, Synscapes, https://arxiv.org/abs/1810.08705, https://7dlabs.com/synscapes-overview
-2019, 6, PRESIL, https://ieeexplore.ieee.org/abstract/document/8813809/, https://uwaterloo.ca/waterloo-intelligent-systems-engineering-lab/projects/precise-synthetic-image-and-lidar-presil-dataset-autonomous
-2017, 627, CARLA, https://arxiv.org/abs/1711.03938, https://carla.org/
+2016, 442, Virtual KITTI, https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Gaidon_Virtual_Worlds_as_CVPR_2016_paper.html, https://europe.naverlabs.com/research/computer-vision/proxy-virtual-worlds/
+2018, 411, Airsim, https://arxiv.org/abs/1705.05065, https://github.com/Microsoft/AirSim
+2016, 209, SIM 10k, https://arxiv.org/abs/1610.01983, https://github.com/umautobots/driving-in-the-matrix
+2018, 22, Synscapes, https://arxiv.org/abs/1810.08705, https://7dlabs.com/synscapes-overview
+2019, 8, PRESIL, https://ieeexplore.ieee.org/abstract/document/8813809/, https://uwaterloo.ca/waterloo-intelligent-systems-engineering-lab/projects/precise-synthetic-image-and-lidar-presil-dataset-autonomous
+2017, 660, CARLA, https://arxiv.org/abs/1711.03938, https://carla.org/
